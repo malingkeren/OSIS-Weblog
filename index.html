@@ -1,78 +1,494 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+  <head>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-	<title>malingkeren/OSIS-Weblog @ GitHub</title>
-	
-	<style type="text/css">
-		body {
-  		margin-top: 1.0em;
-  		background-color: #dbd8d7;
-		  font-family: "Helvetica,Arial,FreeSans";
-  		color: #000000;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-		h1 { font-size: 3.8em; color: #242728; margin-bottom: 3px; }
-		h1 .small { font-size: 0.4em; }
-		h1 a { text-decoration: none }
-		h2 { font-size: 1.5em; color: #242728; }
-    h3 { text-align: center; color: #242728; }
-    a { color: #242728; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-		pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-	</style>
-	
+<b:if cond='data:blog.pageType == &quot;index&quot;'>
+<title><data:blog.pageTitle/></title>
+<b:else/>
+<title><data:blog.pageName/></title>
+</b:if>
+
+<b:include data='blog' name='all-head-content'/>
+    <b:skin><![CDATA[
+
+/* ************************************
+
+Free Blogger Template Style:
+Name: Clean Grey
+Blogger Template Design by SplashyTemplates.com
+Designer: Anisha
+Designer URL: http://www.splashytemplates.com/
+Template URL: http://cleangrey-splashy.blogspot.com/
+Version: 1.0
+Date: October 2010
+
+************************************
+
+TEMPLATES RELEASED UNDER THE CREATIVE COMMONS ATTRIBUTION 3.0 UNPORTED LICENSE.
+URL: http://creativecommons.org/licenses/by/3.0/
+Both personal and commercial use are permitted, under condition that credit links must be kept intact.
+PLEASE RESPECT OUR WORKS AND DO NOT REMOVE THE FOOTER CREDIT LINKS WITHOUT OUR PERMISSION. We need your support for continue work.
+YOU ARE ALLOWED TO DISTRIBUTE OUR TEMPLATES BUT NOT ALLOWED TO ADD ANY LINK ON FOOTER. 
+
+************************************
+
+Thank you very much for supporting us. We appreciate that!
+
+************************************ */
+
+/* Variable definitions
+   ====================
+   <Variable name="bodybackgroundcolor" description="Page Background"
+type="color" default="#CCC" value="#4c4c4c">
+   <Variable name="bodyfont" description="Page Text"
+             type="font" default="normal normal 12px Arial, Tahoma, Helvetica, FreeSans, sans-serif" value="normal normal 14px Nobile">
+   <Variable name="bodytextcolor" description="Page Text Color"
+type="color" default="#333" value="#000000">
+
+
+   <Variable name="headerfont" description="Blog Title Font"
+             type="font" default="normal normal 42px Arial, Tahoma, Helvetica, FreeSans, sans-serif" value="normal bold 80px Arial, Tahoma, Helvetica, FreeSans, sans-serif;">
+   <Variable name="headertextcolor" description="Blog Title Color"
+type="color" default="#FFF" value="#555555">
+
+   <Variable name="descriptionfont" description="Blog Description Font"
+             type="font" default="normal normal 16px Arial, Tahoma, Helvetica, FreeSans, sans-serif" value="normal normal 13px Arial, Tahoma, Helvetica, FreeSans, sans-serif;">
+   <Variable name="descriptiontextcolor" description="Blog Description Color"
+type="color" default="#FFF" value="#555555">
+
+   <Variable name="postdatefont" description="Post Date Font"
+             type="font" default="italic normal 11px Arial, Tahoma, Helvetica, FreeSans, sans-serif" value="normal normal 14px Arial, Tahoma, Helvetica, FreeSans, sans-serif;">
+   <Variable name="postdatetextcolor" description="Post Date Color"
+type="color" default="#777" value="#004646">
+
+   <Variable name="posttitlefont" description="Post Title Font"
+             type="font" default="normal normal 22px Arial, Tahoma, Helvetica, FreeSans, sans-serif" value="normal normal 22px 'Courier New', Courier, FreeMono, monospace;">
+   <Variable name="posttitletextcolor" description="Post Title Color"
+type="color" default="#222" value="#333333">
+
+   <Variable name="postfooterfont" description="Post Footer Font"
+             type="font" default="normal normal 12px Arial, Tahoma, Helvetica, FreeSans, sans-serif" value="normal normal 14px Arial, Tahoma, Helvetica, FreeSans, sans-serif;">
+   <Variable name="postfootertextcolor" description="Post Footer Color"
+type="color" default="#222" value="#004646">
+
+   <Variable name="widgettitlefont" description="Gadgets Title Font"
+             type="font" default="normal bold 11px Arial, Tahoma, Helvetica, FreeSans, sans-serif" value="normal normal 16px 'Courier New', Courier, FreeMono, monospace;">
+   <Variable name="widgettitletextcolor" description="Gadgets Title Color"
+type="color" default="#222" value="#999999">
+   <Variable name="widgettextcolor" description="Gadgets Text Color"
+type="color" default="#555" value="#333333">
+
+   <Variable name="blockquotefont" description="Blockquote Font"
+             type="font" default="normal normal 12px Arial, Tahoma, Helvetica, FreeSans, sans-serif" value="italic normal 12px Georgia, Utopia, 'Palatino Linotype', Palatino, serif;">
+   <Variable name="blockquotecolor" description="Blockquote Color"
+type="color" default="#222" value="#333333">
+
+   <Variable name="linkcolor" description="Link Color"
+type="color" default="#39C" value="#333333">
+   <Variable name="visitedlinkcolor" description="Visited Link Color"
+type="color" default="#999" value="#333333">
+   <Variable name="hoverlinkcolor" description="Hover Link Color"
+type="color" default="#39F" value="#c00000">
+*/
+
+
+/*.quickedit, a.quickedit img{display:none;}*/
+#navbar-iframe{display:none !important;}
+/* Content
+----------------------------------------------- */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,span,strike,strong,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;list-style-type: none;}
+body#layout #outer-wrapper{width:800px !important;}
+body#layout #credits, body#layout #search{display:none;}
+body#layout #footer-wrapper, body#layout #header-wrapper{height:100%;}
+a img{border-width:0;}
+body {
+font: $bodyfont;
+color: $bodytextcolor;
+background: $bodybackgroundcolor;
+line-height:1.6em;
+text-align: left;
+text-shadow:1px 1px 1px #eee;
+}
+a:link{text-decoration:underline;color:$linkcolor;}
+a:visited{text-decoration:underline;color:$visitedlinkcolor;}
+a:hover{text-decoration:underline;color:$hoverlinkcolor;}
+
+/* Header
+----------------------------------------------- */
+#header-wrapper {
+width: 790px;
+padding:15px 0;
+margin-bottom:40px;
+float:left;
+}
+#header { 
+width: 500px;
+color: $headertextcolor;
+float:left;
+}
+.header h1 {
+font: $headerfont;
+color: $headertextcolor;
+letter-spacing:-6px;
+}
+.header h1 a {
+color: $headertextcolor;
+text-decoration:none;
+}
+#header a:hover {
+color: $headertextcolor;
+text-decoration:none;
+}
+.header .description {
+font: $descriptionfont;
+color: $descriptiontextcolor;
+max-width:450px;
+margin-top:-15px;
+}
+
+/* Search
+----------------------------------------------- */
+#search{
+width:220px;
+float:right;
+}
+#searchform{
+background:transparent;
+}
+#searchtext{
+background:#fff;
+width:150px;
+padding:2px 0 3px 5px;
+color:#333;
+border:none;
+float:left;
+border:1px solid #e0e0e0;
+}
+#searchbutton{
+margin-left:5px;
+background:#555;
+padding:2px 4px 3px;
+color:#fff;
+border:none;
+float:left;
+text-align:center;
+font-size:12px;
+}
+
+/* Pages
+----------------------------------------------- */
+#PageList1 h2{
+display:none;
+}
+#menu-wrapper{
+background:#e0e0e0;
+font:normal 16px 'Courier New', Courier, FreeMono, monospace;
+clear:both;
+padding:10px 0 10px 10px;
+border-left:1px solid #d8d8d8;
+}
+#menu ul{
+text-align:left;
+}
+#menu li {
+display:inline;
+margin-right:20px;
+}
+#menu li a {
+color:#555;
+font-weight:normal;
+text-decoration:none;
+}
+#menu li.selected a{
+color:#555;
+font-weight:normal;
+}
+#menu li a:hover {
+text-decoration:underline;
+}
+
+/* Columns
+----------------------------------------------- */
+#outer-wrapper {
+width: 790px;
+margin:0 auto;
+text-align:left;
+}
+#content-wrapper {
+background:url(http://1.bp.blogspot.com/_JUg9QsmKp5s/TMtdNHH3G-I/AAAAAAAAAWk/fVljsFrl4uo/s000/bgouter.png) repeat-y;
+padding:35px 0 0;
+margin-bottom:15px;
+-moz-border-radius-bottomleft:15px;
+-moz-border-radius-bottomright:15px;
+-webkit-border-bottom-left-radius:15px;
+-webkit-border-bottom-right-radius:15px;
+}
+#crosscol-wrapper{
+display:none;
+}
+#main-wrapper {
+width: 500px;
+float: left;
+padding:0 25px;
+}
+#sidebar-wrapper {
+width: 200px;
+float: right;
+padding:0 20px;
+color: $widgettextcolor;
+font:normal 12px Arial;
+}
+#sidebar-wrapper .widget{
+border-bottom:1px solid #ccc;
+}
+
+/* Sidebar Headings
+----------------------------------------------- */
+#sidebar-wrapper h2 {
+margin:.5em 0 .25em;
+font: $widgettitlefont;
+color: $widgettitletextcolor;
+}
+
+/* Sidebar Content
+----------------------------------------------- */
+.sidebar {
+line-height: 1.5em;
+}
+.sidebar .widget, .main .widget { 
+margin:0 0 1.5em;
+padding:0 0 1.5em;
+}
+.sidebar li{
+padding:0px 0 3px 15px;
+text-indent:-15px;
+line-height:1.5em;
+}
+
+/* Posts
+-----------------------------------------------*/
+h2.date-header {
+padding-bottom:2px;
+margin-bottom:30px;
+font: $postdatefont;
+color:$postdatetextcolor;
+text-align:right;
+border-bottom:1px solid #e5e5e5;
+}
+.post {
+margin-bottom:25px;
+padding-bottom:25px;
+}
+h3.entry-title {
+background:url(http://2.bp.blogspot.com/_JUg9QsmKp5s/TMtdNhL6H9I/AAAAAAAAAWo/ssqDSiEt-O0/s000/bgposttitle.gif) no-repeat;
+height:41px;
+padding:8px 0 0 32px;
+margin-left:-32px;
+font: $posttitlefont;
+color:$posttitletextcolor;
+}
+h3.entry-title a, h3.entry-titlea:visited, h3.entry-title strong {
+color:$posttitletextcolor;
+text-decoration:none;
+}
+h3.entry-title strong, h3.entry-title a:hover {
+color:$posttitletextcolor;
+text-decoration:none;
+}
+.post-body{
+margin: 10px 0 20px;
+line-height:1.6em;
+}
+.post blockquote {
+font: $blockquotefont;
+color: $blockquotecolor;
+line-height:1.4em;
+padding:3px 0 3px 12px;
+}
+.post-body ul, .post-body ol{
+padding: 5px 10px 5px 30px;
+}
+.post-body ul li{
+padding: 1px 0;
+list-style-type: disc;
+}
+.post-body ol li{
+padding: 1px 0;
+list-style-type: decimal;
+}
+.jump-link{
+display:inline;
+}
+.post-footer {
+margin: .75em 0;
+font: $postfooterfont;
+color:$postfootertextcolor;
+line-height: 1.4em;
+}
+.comment-link {
+margin-left: .6em;
+}
+.tr-caption-container img {
+border: none;
+padding: 0;
+}
+
+/* Comments
+----------------------------------------------- */
+#comments, #comments h4 {
+margin:10px 0;
+}
+#comments-block .comment-author, #comments-block .comment-body, #comments-block .comment-footer{
+background:#fff;
+}
+#comments-block .comment-author {
+padding:7px 0 5px 10px;
+border:1px solid #ccc;
+border-bottom:none;
+-moz-border-radius-topleft:5px;
+-moz-border-radius-topright:5px;
+-webkit-border-top-left-radius:5px;
+-webkit-border-top-right-radius:5px;
+}
+#comments-block .comment-body {
+border-left:1px solid #ccc;
+border-right:1px solid #ccc;
+}
+#comments-block .comment-footer {
+padding:10px 0 7px 10px;
+margin-bottom:25px;
+font-size:85%;
+border:1px solid #ccc;
+border-top:none;
+}
+#comments-block .comment-body p {
+padding:0 10px;
+}
+.deleted-comment {
+color:gray;
+font-style:italic;
+}
+.comment-form{
+padding-left:45px;
+}
+#blog-pager {
+text-align:center;
+}
+#blog-pager-newer-link {
+float:left;
+margin-left:15px;
+}
+#blog-pager-older-link {
+float:right;
+margin-right:15px;
+}
+.feed-links {
+clear: both;
+line-height: 2.5em;
+display:none;
+}
+
+/* Profile 
+----------------------------------------------- */
+.profile-img{
+padding:2px;
+margin-right:5px;
+border:1px solid #ccc;
+float:left;
+}
+
+/* Footer
+----------------------------------------------- */
+#footer-wrapper {
+padding:10px 0 15px;
+font-size:12px;
+}
+#credits{
+color: #c5c5c5;
+line-height:1.1em;
+}
+#credits p{
+text-align:center;
+}
+#credits a{
+color: #c5c5c5;
+text-decoration:none;
+}
+#credits a:hover{
+text-decoration:underline;
+color: #999;
+}
+
+]]></b:skin>
+<link href='http://b.imagehost.org/0077/Untitled-1.png' rel='SHORTCUT ICON'/>  
 </head>
 
-<body>
-  <a href="http://github.com/malingkeren/OSIS-Weblog"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+<body> 
+<div id='outer-wrapper'><div id='wrap2'>
 
-  <div id="container">
+<!-- skip links for text browsers -->
+<span id='skiplinks' style='display:none;'>
+<a href='#main'>skip to main </a> |
+<a href='#sidebar'>skip to sidebar</a>
+</span>
 
-    <div class="download">
-      <a href="http://github.com/malingkeren/OSIS-Weblog/zipball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
-      <a href="http://github.com/malingkeren/OSIS-Weblog/tarball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
-    </div>
+<div id='header-wrapper'>
 
-    <h1><a href="http://github.com/malingkeren/OSIS-Weblog">OSIS-Weblog</a>
-      <span class="small">by <a href="http://github.com/malingkeren">malingkeren</a></span></h1>
+  <b:section class='header' id='header' maxwidgets='1' showaddelement='no'>
+<b:widget id='Header1' locked='true' title='OSIS SMAN 10 Samarinda (Header)' type='Header'/>
+</b:section>
 
-    <div class="description">
-      The Weblog of OSIS
-    </div>
+<div id='search'>
+<form action='/search' id='searchform' method='get'>
+<input id='searchtext' name='q' type='text' value=''/>
+<input id='searchbutton' size='10' type='submit' value='Search'/>
+</form>
+</div>
 
-    <p>Welcome to the page</p><h2>Contact</h2>
-<p> (malingkeren@gmail.com)<br/>      </p>
+</div>
+
+<div id='menu-wrapper'>
+<b:section class='menu' id='menu'>
+<b:widget id='HTML1' locked='false' title='' type='HTML'/>
+</b:section>
+</div>
 
 
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="http://github.com/malingkeren/OSIS-Weblog/zipball/master">zip</a> or
-      <a href="http://github.com/malingkeren/OSIS-Weblog/tarball/master">tar</a> formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/malingkeren/OSIS-Weblog</pre>
-    </p>
+<div id='content-wrapper'>
+<div id='crosscol-wrapper' style='text-align:center'>
+  <b:section class='crosscol' id='crosscol'/>
+</div>
 
-    <div class="footer">
-      get the source code on GitHub : <a href="http://github.com/malingkeren/OSIS-Weblog">malingkeren/OSIS-Weblog</a>
-    </div>
+<div id='main-wrapper'>
+  <b:section class='main' id='main' showaddelement='no'>
+<b:widget id='Blog1' locked='true' title='Posting Blog' type='Blog'/>
+</b:section>
+</div>
 
-  </div>
+<div id='sidebar-wrapper'>
+  <b:section class='sidebar' id='sidebar' preferred='yes'>
+<b:widget id='HTML3' locked='false' title='' type='HTML'/>
+<b:widget id='HTML2' locked='false' title='' type='HTML'/>
+<b:widget id='BlogArchive1' locked='false' title='Archives' type='BlogArchive'/>
+</b:section>
+</div>
 
-  
+<!-- spacer for skins that want sidebar and main to be the same height-->
+<div class='clear'>&#160;</div>
+</div><!-- /content-wrapper-->
+
+
+<div id='footer-wrapper'><div id='credits'>
+<!-- We appreciate if you keep intact footer credit links. If you wish to remove links, please visit our "purchase a template license" page.
+     http://www.splashytemplates.com/p/purchase-license.html
+ -->
+<!-- For Distributors.
+     If you distribute this template, please respect to us and do not put your link. 
+-->
+<p>Copyright &#169; 2010 <a expr:href='data:blog.homepageUrl' title='All Rights Reserved'><data:blog.title/></a><br/><a href='http://www.splashytemplates.com/' title='Blogger Templates'>Blogger Templates</a> by <a href='http://www.splashytemplates.com/2010/10/blogger-templates-clean-grey.html' title='Blogger Templates'>Splashy Templates</a></p></div></div>
+</div></div><!-- /outer-wrapper-->
 </body>
 </html>
+                
